@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+  <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/captcha.css" />
+
+    <style>
+      body {
+        font-family: "Arial";
+        font-size: 12px;
+      }
+
+      #form-contact {
+        display: block;
+        width: 280px;
+        padding: 10px;
+      }
+
+      #message {
+        padding: 5px;
+        text-align: center;
+      }
+
+      input {
+        width: 100%;
+        height: 30px;
+      }
+
+      button {
+        display: block;
+        width: 200px;
+        height: 30px;
+        margin: 0 auto;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <form id="form-contact">
+      <h1>
+        Complete el formulario:
+      </h1>
+
+      <input type="text" placeholder="Ingrese nombres" id="txtname" name="txtname"> 
+      <br><br>
+      <input type="text" placeholder="Ingrese apellidos" id="txtlastname" name="txtlastname">
+      <br><br>
+
+      <div id="captcha">
+        <div id="recaptcha_image"></div>
+        <div class="recaptcha_only_if_incorrect_sol" style="color:red"></div>
+        <label class="solution">
+          <span class="recaptcha_only_if_image">Escribe el texto:</span>
+          <!--<span class="recaptcha_only_if_audio">Introduzca los sonidos que oyes :</span>-->
+          <input type="text" id="recaptcha_response_field" name="recaptcha_response_field" />
+        </label>
+        <div class="options">
+          <a href="javascript:Recaptcha.reload()" id="icon-reload">Obtener otro CAPTCHA</a>
+          
+          <!--<a class="recaptcha_only_if_image" href="javascript:Recaptcha.switch_type('audio')" id="icon-audio">Obtener un CAPTCHA de audio</a>-->
+          <!--<a class="recaptcha_only_if_audio" href="javascript:Recaptcha.switch_type('image')" id="icon-image">Obtener un CAPTCHA de imagen</a>-->
+          
+          <!--
+          <a href="javascript:Recaptcha.showhelp()" id="icon-help">Ayuda</a>
+          -->
+        </div>
+      </div>
+
+      <div id="message"></div>
+
+      <br>
+
+      <button>Enviar</button>
+    </form>
+
+    <script src="assets/vendor/recaptcha_ajax.js"></script>
+    <script src="assets/vendor/jquery-1.9.1.min.js"></script>
+    <script src="assets/vendor/jquery.validate.min.js"></script>
+    <script src="assets/main.js"></script>
+  </body>
+
+</html>
